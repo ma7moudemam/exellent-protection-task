@@ -1,0 +1,23 @@
+<h3>اختيار عاملة النظافة</h3>
+<div class="worker">
+   
+    <div class="results">
+        <p>عدد نتائج البحث <span>{{workers.length}}</span> خادمة منزلية </p>
+        <ul class="workerList">
+            <li *ngFor="let w of workers" class="card">
+                <img src="./../../../assets/images/3.jpg" alt="">
+                <div class="card-content">
+                    <h4>{{w.name}}</h4>
+                    <ul class="details">
+                        <li>المهنة :{{w.position}}</li>
+                        <li>الجنسية :{{w.nationality}}</li>
+                        <li>الديانة :{{w.relagion}}</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="filter">
+        <p>this is filter</p>
+    </div>
+</div>

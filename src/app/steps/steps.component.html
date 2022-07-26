@@ -1,0 +1,81 @@
+<app-landing></app-landing>
+<div class="steps">
+    <ul>
+        <!-- <li *ngFor="let item of steps">
+            <div class="step">
+                <i class="fas {{icons[steps.indexOf(item)]}}"></i>
+                <div class="content">
+                    <h5>{{steps.indexOf(item)+1}} الخطوة</h5>
+                    <p>{{item}}</p>
+                </div>
+            </div>
+        </li> -->
+
+        <li>
+            <div class="step"
+            routerLink="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="content">
+                    <h5>1 الخطوة</h5>
+                    <p>تحديد العنوان</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="step">
+                <i class="fas fa-list-alt"></i>
+                <div class="content">
+                    <h5>2 الخطوة</h5>
+                    <p>اختيار الباقة</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="step"
+                routerLink="workers">
+                <i class="fas fa-user"></i>
+                <div class="content">
+                    <h5>3 الخطوة</h5>
+                    <p>اختيار العاملة</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="step">
+                <i class="fas fa-info-circle"></i>
+                <div class="content">
+                    <h5>4 الخطوة</h5>
+                    <p>التفاصيل</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="step">
+                <i class="fas fa-paperclip"></i>
+                <div class="content">
+                    <h5>5 الخطوة</h5>
+                    <p>عرض العقد</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="step">
+                <i class="fas fa-money-bill-wave"></i>
+                <div class="content">
+                    <h5>6 الخطوة</h5>
+                    <p>المرفقات</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="step">
+                <i class="fas fa-credit-card"></i>
+                <div class="content">
+                    <h5>7 الخطوة</h5>
+                    <p>الدفع</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>
