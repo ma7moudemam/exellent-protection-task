@@ -1,23 +1,41 @@
 <h3>اختيار عاملة النظافة</h3>
 <div class="worker">
-   
-    <div class="results">
-        <p>عدد نتائج البحث <span>{{workers.length}}</span> خادمة منزلية </p>
-        <ul class="workerList">
-            <li *ngFor="let w of workers" class="card">
-                <img src="./../../../assets/images/3.jpg" alt="">
-                <div class="card-content">
-                    <h4>{{w.name}}</h4>
-                    <ul class="details">
-                        <li>المهنة :{{w.position}}</li>
-                        <li>الجنسية :{{w.nationality}}</li>
-                        <li>الديانة :{{w.relagion}}</li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+  <div class="results">
+    <p>
+      عدد نتائج البحث <span>{{ workers.length }}</span> خادمة منزلية
+    </p>
+    <ul class="workerList">
+      <li *ngFor="let w of workers" class="card">
+        <img src="./../../../assets/images/3.jpg" alt="" />
+        <div class="card-content">
+          <h4>{{ w.name | uppercase }}</h4>
+          <ul class="details">
+            <li>المهنة :{{ w.position }}</li>
+            <li>الجنسية :{{ w.nationality }}</li>
+            <li>الديانة :{{ w.relagion }}</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="filter">
+    <p>فلترة النتائج</p>
+    <div class="age">
+      <p>العمر</p>
+      <span>50</span>
+      <h5>Range: {{rangeValues[0] + ' - ' + rangeValues[1]}}</h5> 
     </div>
-    <div class="filter">
-        <p>this is filter</p>
+    <p-slider [(ngModel)]="rangeValues" [range]="true" [min]="18" [max]="50"></p-slider>
+    <div>
+      <p>الجنسية</p>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>اختر</option>
+        <option *ngFor="let countery of coutries">{{countery.name}}</option>
+      </select>
     </div>
+    <div class="actoins">
+      <button class="show-btn">عرض الباقات</button>
+      <button class="delete-btn">مسح</button>
+    </div>
+  </div>
 </div>
