@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Worker } from './worker.model';
 
 @Injectable({
@@ -6,7 +6,6 @@ import { Worker } from './worker.model';
 })
 export class WorkersService {
 
-  
   workers : Worker[] = [
     {
       name:'Elti Ernawati',

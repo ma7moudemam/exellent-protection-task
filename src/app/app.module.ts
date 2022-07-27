@@ -16,6 +16,9 @@ import { LocationComponent } from './steps/location/location.component';
 import { FormsModule } from '@angular/forms';
 
 import {SliderModule} from 'primeng/slider';
+import {DialogModule} from 'primeng/dialog';
+import { SocailComponent } from './socail/socail.component';
+
 
 
 const appRoutes :Routes =[
@@ -50,6 +53,7 @@ const appRoutes :Routes =[
     ChosseWorkerComponent,
     HomeComponent,
     LocationComponent,
+    SocailComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,8 @@ const appRoutes :Routes =[
     RouterModule.forRoot(appRoutes),
     FormsModule,
     BrowserAnimationsModule,
-    SliderModule
+    SliderModule,
+    DialogModule
 
   ],
   providers: [],

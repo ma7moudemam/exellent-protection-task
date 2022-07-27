@@ -5,19 +5,20 @@
       عدد نتائج البحث <span>{{ workers.length }}</span> خادمة منزلية
     </p>
     <ul class="workerList">
-      <li *ngFor="let w of workers" class="card">
+      <li *ngFor="let worker of workers" class="card" (click)="showModalDialog()" >
         <img src="./../../../assets/images/3.jpg" alt="" />
         <div class="card-content">
-          <h4>{{ w.name | uppercase }}</h4>
+          <h4 class="name">{{ worker.name | uppercase }}</h4>
           <ul class="details">
-            <li>المهنة :{{ w.position }}</li>
-            <li>الجنسية :{{ w.nationality }}</li>
-            <li>الديانة :{{ w.relagion }}</li>
+            <li>المهنة :{{ worker.position }}</li>
+            <li>الجنسية :{{ worker.nationality }}</li>
+            <li>الديانة :{{ worker.relagion }}</li>
           </ul>
         </div>
       </li>
     </ul>
   </div>
+ 
   <div class="filter">
     <p>فلترة النتائج</p>
     <div class="age">
@@ -39,3 +40,47 @@
     </div>
   </div>
 </div>
+
+
+<p-dialog  header=" تفاصيل عاملة" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
+[draggable]="false" [resizable]="false" >
+  <div class="m-0" class="modalContainer">
+      <div class="selected-details">
+        <img src="./../../../assets/images/3.jpg" alt="" />
+        <div class="details">
+          <h4 class="name">{{ selectedWorker.name | uppercase }}</h4>
+          <ul class="details">
+            <li>المهنة :{{ selectedWorker.position }}</li>
+            <li>الجنسية :{{ selectedWorker.nationality }}</li>
+            <li>الديانة :{{ selectedWorker.relagion }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="details">
+          <h4 class="skills-header">المهارات والاعمال المنزلية</h4>
+          <ul class="details">
+            <li>نظافة وتدبير المنزل </li>
+            <li>اجادة الطبخ</li>
+            <li>التعامل مع الاطفال</li>
+            <li>التعامل مع كبار السن</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="details">
+          <h4 class="skills-header">ملاحظات</h4>
+          <ul class="details">
+            <li>هى المره الاولى لها فى المملكة لكن تريد تعلم طبف الماكولات العربيه </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+    <ng-template pTemplate="footer" >
+      <div class="modal-btn">
+        <button class="closeModal" (click)="displayModal=false">إغلاق</button>
+        <button class="conf-btn">تعاقد الان</button>
+      </div>
+    </ng-template>
+</p-dialog>

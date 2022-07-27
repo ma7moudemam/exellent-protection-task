@@ -15,6 +15,15 @@ export class ChosseWorkerComponent implements OnInit {
   workers!:Worker[];
   coutries!:Countries[];
   rangeValues: number[] =[20,50];
+  displayModal: boolean = false;
+
+
+  selectedWorker: Worker={
+    name:'Elti Ernawati',
+      position:'عاملة نظافة',
+      nationality:'اندونسيا',
+      relagion :'غير محدد',
+  }  
 
 
   constructor(private workerService: WorkersService , 
@@ -26,7 +35,12 @@ export class ChosseWorkerComponent implements OnInit {
   ngOnInit(): void {
     this.workers = this.workerService.getWorkers();
     this.coutries = this.countriesService.getCountries();
-    
+  
   }
+
+  showModalDialog() {
+    this.displayModal = true;
+}
+
 
 }

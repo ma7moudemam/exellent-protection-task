@@ -1,0 +1,21 @@
+.socail{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right:0;
+    top: 140px;
+    background-color: lightgreen;
+    border-radius:8px;
+    height: 200px;
+}
+
+.socail i{
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
