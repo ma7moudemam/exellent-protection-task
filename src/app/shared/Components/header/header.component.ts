@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   // items = ['الرئيسية','عن الشركة' ,'خدمات الشركة' ,'الأخبار','الأسئلة الشاعة','اتصل بنا']
   constructor(public translate:TranslateService) {
-    this.currentLang = localStorage.getItem('currentLang') || 'ar';
+    this.currentLang = localStorage.getItem('currentLang') || 'en';
     this.translate.use(this.currentLang);
   }
 

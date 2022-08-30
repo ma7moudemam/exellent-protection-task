@@ -21,7 +21,7 @@
   </div>
   
   <div class="filter">
-    <p>فلترة النتائج</p>
+    <p>{{"filter-results" | translate}}</p>
     <div class="age">
       <p>العمر</p>
       <span>50</span>
@@ -29,14 +29,14 @@
     </div>
     <p-slider [(ngModel)]="rangeValues" [range]="true" [min]="18" [max]="50"></p-slider>
     <div>
-      <p>الجنسية</p>
+      <p>{{"nationality" | translate}}</p>
       <select class="form-select" aria-label="Default select example">
         <option selected>اختر</option>
         <option *ngFor="let countery of coutries">{{countery.name}}</option>
       </select>
     </div>
     <div class="actoins">
-      <button class="show-btn">عرض الباقات</button>
+      <button class="show-btn">{{"package"| translate}}</button>
       <button class="delete-btn">{{"delete" | translate}}</button>
     </div>
   </div>

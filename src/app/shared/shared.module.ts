@@ -9,6 +9,8 @@ import { LandingComponent } from './Components/landing/landing.component';
 import { HomeComponent } from './Components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from '../app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,14 +28,22 @@ import { BrowserModule } from '@angular/platform-browser';
     RouterModule,
     TranslateModule,
     FormsModule,
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   exports:[
     HeaderComponent,
     FooterComponent,
     SocailComponent,
     HomeComponent,
-    LandingComponent
+    LandingComponent,
+    FormsModule,
+    BrowserModule,
+    RouterModule,
+    AppRoutingModule,
+    HttpClientModule
+    
 
   ]
 })

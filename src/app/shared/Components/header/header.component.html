@@ -2,21 +2,23 @@
 
     <img class="userImage" src="./../../assets/images/3.jpg" alt="user">
 
-    <div>
-        <ul>
-            <li (click)="changeCurrentLanguage('ar')">AR</li>
-            <li (click)="changeCurrentLanguage('en')">EN</li>
-        </ul>
-    </div>
+  
 
     <ul>
         <!-- <li *ngFor="let item of items" routerLink='/steps'>{{item}}</li> -->
-        <li routerLink="/">{{ 'Home' | translate}}</li>
-        <li>{{'about-company' | translate}}</li>    
-        <li routerLink="/steps/location">{{'company-services'| translate}}</li>
+        <li routerLink="/">{{ "Home" | translate}}</li>
+        <li>{{"about-company" | translate}}</li>    
+        <li routerLink="/steps/location">{{"company-services"| translate}}</li>
         <li>{{"news"| translate}}</li>
         <li>{{"faqs" | translate}}</li>
         <li>{{"contact-us"| translate}}</li>
+
+        <div>
+            <ul class="lang">
+                <li (click)="changeCurrentLanguage('ar')">AR</li>
+                <li (click)="changeCurrentLanguage('en')">EN</li>
+            </ul>
+        </div>
     </ul>
 
   

@@ -6,12 +6,10 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader'
 import {TranslateModule,TranslateLoader} from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FormsModule } from '@angular/forms';
 
 import {SliderModule} from 'primeng/slider';
 import {DialogModule} from 'primeng/dialog';
 import { SharedModule } from './shared/shared.module';
-import { AppRoutingModule } from './app-routing.module';
 import { StepsModule } from './steps/steps.module';
 import { transition } from '@angular/animations';
 
@@ -21,18 +19,14 @@ import { transition } from '@angular/animations';
     AppComponent,
   ],
   imports: [
-    BrowserModule,
     FontAwesomeModule,
-    FormsModule,
     BrowserAnimationsModule,
     SliderModule,
     DialogModule,
-    SharedModule,
-    AppRoutingModule,
     StepsModule,
-    HttpClientModule,
+    SharedModule,
     TranslateModule.forRoot({
-      
+      defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
