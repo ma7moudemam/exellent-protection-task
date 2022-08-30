@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Worker } from './worker.model';
+import { Worker } from '../models/worker.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,19 +8,22 @@ export class WorkersService {
 
   workers : Worker[] = [
     {
-      name:'Elti Ernawati',
+      id:1,
+      name:'worker 1',
       position:'عاملة نظافة',
       nationality:'اندونسيا',
       relagion :'غير محدد',
     },
     {
-      name:'Elti Ernawati',
+      id:2,
+      name:'worker 2',
       position:'عاملة نظافة',
       nationality:'اندونسيا',
       relagion :'غير محدد',
     },
     {
-      name:'Elti Ernawati',
+      id:3,
+      name:'worker 3',
       position:'عاملة نظافة',
       nationality:'اندونسيا',
       relagion :'غير محدد',
@@ -31,5 +34,9 @@ export class WorkersService {
 
   getWorkers(){
     return this.workers.slice();
+  }
+
+  getWorkerByID(id: number){
+    return this.workers[id];
   }
 }

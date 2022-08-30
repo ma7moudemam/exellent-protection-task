@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Countries } from '../countries.model';
-import { CountriesService } from '../countries.service';
-import { Worker } from '../worker.model';
-import { WorkersService } from '../workers.service';
+import { Component, OnInit, Output } from '@angular/core';
+import { Countries } from '../../models/countries.model';
+import { CountriesService } from '../../Services/countries.service';
+import { Worker } from '../../models/worker.model';
+import { WorkersService } from '../../Services/workers.service';
 
 
 @Component({
@@ -18,12 +18,12 @@ export class ChosseWorkerComponent implements OnInit {
   displayModal: boolean = false;
 
 
-  selectedWorker: Worker={
-    name:'Elti Ernawati',
-      position:'عاملة نظافة',
-      nationality:'اندونسيا',
-      relagion :'غير محدد',
-  }  
+  // selectedWorker: Worker={
+  //   name:'Elti Ernawati',
+  //     position:'عاملة نظافة',
+  //     nationality:'اندونسيا',
+  //     relagion :'غير محدد',
+  // }  
 
 
   constructor(private workerService: WorkersService , 
