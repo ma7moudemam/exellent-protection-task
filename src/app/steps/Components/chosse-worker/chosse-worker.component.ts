@@ -16,7 +16,7 @@ export class ChosseWorkerComponent implements OnInit {
   coutries!:Countries[];
   rangeValues: number[] =[20,50];
   displayModal: boolean = false;
-
+  selectedWorker!: Worker;
 
   // selectedWorker: Worker={
   //   name:'Elti Ernawati',
@@ -41,6 +41,14 @@ export class ChosseWorkerComponent implements OnInit {
   showModalDialog() {
     this.displayModal = true;
 }
+
+  selectWorker(){
+    this.selectedWorker; 
+  }
+
+  display(show:boolean){
+    this.displayModal = show;
+  }
 
 
 }

@@ -1,22 +1,22 @@
-<h3>اختيار عاملة النظافة</h3>
+<h3>{{'choosing-cleaning-lady'| translate}}</h3>
 <div class="worker">
   <div class="results">
     <p>
-      عدد نتائج البحث <span>{{ workers.length }}</span> خادمة منزلية
+      {{'num-search-result' | translate}}<span>{{ workers.length }}</span> {{'house-maid' | translate}}
     </p>
     <ul class="workerList">
-      <li *ngFor="let worker of workers" class="card" (click)="showModalDialog()" >
-        <app-worker-popup [displayModal]="displayModal" [selectedWorker]="worker"></app-worker-popup>
+      <li *ngFor="let worker of workers" class="card" (click)="showModalDialog()" (click)="selectedWorker=worker" >
         <img src="./../../../assets/images/3.jpg" alt="" />
         <div class="card-content">
           <h4 class="name">{{ worker.name | uppercase }}</h4>
           <ul class="details">
-            <li>المهنة :{{ worker.position }}</li>
-            <li>الجنسية :{{ worker.nationality }}</li>
-            <li>الديانة :{{ worker.relagion }}</li>
+            <li>{{"profession"| translate}} :{{ worker.position }}</li>
+            <li>{{"nationality" | translate}} :{{ worker.nationality }}</li>
+            <li>{{"religion" | translate}} :{{ worker.relagion }}</li>
           </ul>
         </div>
       </li>
+      <app-worker-popup [displayModal]="displayModal" [selectedWorker]="selectedWorker" (displayPopup)="display($any($event))"></app-worker-popup>
     </ul>
   </div>
   
@@ -37,7 +37,7 @@
     </div>
     <div class="actoins">
       <button class="show-btn">عرض الباقات</button>
-      <button class="delete-btn">مسح</button>
+      <button class="delete-btn">{{"delete" | translate}}</button>
     </div>
   </div>
 </div>

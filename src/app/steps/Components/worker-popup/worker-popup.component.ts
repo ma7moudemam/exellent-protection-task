@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Worker } from '../../models/worker.model';
 import { WorkersService } from '../../Services/workers.service';
 
@@ -11,10 +11,16 @@ export class WorkerPopupComponent implements OnInit {
 
   @Input() selectedWorker!: Worker;;
   @Input()  displayModal: boolean = false;
+  @Output() newItemEvent = new EventEmitter<any>();
   
-  constructor(private service: WorkersService ) { }
+  constructor() { }
 
   ngOnInit(): void {
+  }
+
+  display(value: any) {
+    this.displayModal= false;
+    this.newItemEvent.emit(value);
   }
 
   
