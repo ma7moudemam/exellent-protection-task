@@ -9,16 +9,12 @@ import { WorkersService } from '../../Services/workers.service';
 })
 export class WorkerPopupComponent implements OnInit {
 
-  @Input() id!:number;
+  @Input() selectedWorker!: Worker;;
   @Input()  displayModal: boolean = false;
-  selectedWorker!: Worker;
+  
   constructor(private service: WorkersService ) { }
 
   ngOnInit(): void {
-  }
-
-  getWorker(){
-   this.selectedWorker =this.service.getWorkerByID(this.id);
   }
 
   
