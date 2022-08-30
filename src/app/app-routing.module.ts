@@ -17,13 +17,14 @@ const appRoutes :Routes =[
     component:StepsComponent,
     children: [
       {
+        path:'location',
+        component:LocationComponent
+      },
+      {
         path:'workers',
         component:ChosseWorkerComponent,
       },
-      {
-        path:'location',
-        component:LocationComponent
-      }
+    
     ]
   },
   {
