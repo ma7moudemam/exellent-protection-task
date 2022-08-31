@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SliderModule } from 'primeng/slider';
 import { DialogModule } from 'primeng/dialog';
 import { WorkerPopupComponent } from './Components/worker-popup/worker-popup.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -29,7 +30,8 @@ import { WorkerPopupComponent } from './Components/worker-popup/worker-popup.com
     BrowserAnimationsModule,
     SliderModule,
     DialogModule,
-    TranslateModule
+    TranslateModule,
+    BrowserModule
   ],
   exports: [
     ChosseWorkerComponent,

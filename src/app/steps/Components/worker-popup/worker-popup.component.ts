@@ -10,17 +10,17 @@ import { WorkersService } from '../../Services/workers.service';
 export class WorkerPopupComponent implements OnInit {
 
   @Input() selectedWorker!: Worker;;
-  @Input()  displayModal: boolean = false;
-  @Output() newItemEvent = new EventEmitter<any>();
+  @Input()  displayModal!: boolean ;
+  @Output() displayChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  display(value: any) {
-    this.displayModal= false;
-    this.newItemEvent.emit(value);
+  display() {
+    this.displayModal= !(this.displayModal);
+    this.displayChange.emit(this.displayModal);
   }
 
   

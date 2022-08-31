@@ -38,17 +38,12 @@ export class ChosseWorkerComponent implements OnInit {
   
   }
 
-  showModalDialog() {
-    this.displayModal = true;
+  showModalDialog(dispaly:boolean) {
+    this.displayModal = dispaly;
 }
 
   selectWorker(){
     this.selectedWorker; 
   }
-
-  display(show:boolean){
-    this.displayModal = show;
-  }
-
 
 }
